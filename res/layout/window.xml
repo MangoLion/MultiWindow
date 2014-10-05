@@ -1,0 +1,75 @@
+<com.mangolion.multiwindow.mwindow.MWindow xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/window"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <FrameLayout
+        android:id="@+id/frTitle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/window_titlebar_height"
+        android:layout_weight="1" >
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="150dp"
+            android:gravity="center"
+            android:text="Title"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:singleLine="true" />
+
+        <LinearLayout
+            android:id="@+id/llMaxMin"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="right"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btMin"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:tag="min"
+                android:text="_" />
+
+            <Button
+                android:id="@+id/btMax"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:tag="max"
+                android:text="[]" />
+
+            <Button
+                android:id="@+id/btClose"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:tag="close"
+                android:text="X" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frWindow"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/window_border_outline"
+        android:layout_marginLeft="@dimen/window_border_outline"
+        android:layout_marginRight="@dimen/window_border_outline"
+        android:layout_marginTop="@dimen/window_titlebar_height"
+        android:background="@android:color/white" >
+
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/btSize"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="@dimen/window_titlebar_height"
+        android:layout_gravity="bottom|right" />
+
+</com.mangolion.multiwindow.mwindow.MWindow>
